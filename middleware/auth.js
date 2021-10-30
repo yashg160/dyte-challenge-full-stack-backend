@@ -2,7 +2,7 @@ const _ = require('lodash');
 const jwt = require('jsonwebtoken');
 
 const handleTokenAuth = async (req, res, next) => {
-  const authHeader = req.headers['Authorization'];
+  const authHeader = req.headers['authorization'];
 
   if (_.isString(authHeader)) {
     const [authMethod, authToken] = authHeader.split(' ');
@@ -12,7 +12,7 @@ const handleTokenAuth = async (req, res, next) => {
         const dataPayload = await jwt.verify(authToken, process.env.JWT_SECRET);
 
         if (_.isObjectLike(dataPayload)) {
-          res.local.dataPayload = dataPayload;
+          res.locals.dataPayload = dataPayload;
 
           next();
         }

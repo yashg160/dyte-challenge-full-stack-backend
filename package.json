@@ -1,0 +1,38 @@
+{
+  "name": "dyte-challenge-full-stack-backend",
+  "version": "1.0.0",
+  "description": "Dye Challenge Backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yashg160/dyte-challenge-full-stack-backend.git"
+  },
+  "author": "Yash Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yashg160/dyte-challenge-full-stack-backend/issues"
+  },
+  "homepage": "https://github.com/yashg160/dyte-challenge-full-stack-backend#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-useragent": "^1.0.15",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.0.12",
+    "mysql2": "^2.3.2",
+    "random": "^3.0.6",
+    "sequelize": "^6.8.0",
+    "string": "^3.3.3"
+  }
+}

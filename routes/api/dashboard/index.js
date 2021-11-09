@@ -20,7 +20,8 @@ router.get('/analytics', async (req, res, next) => {
                     AND
                     (
                         CASE
-                            WHEN is_expire_type = 1 AND current_timestamp() > expire_time THEN FALSE
+                            WHEN is_expire_type = 0 OR expire_time IS NULL THEN FALSE
+                            WHEN is_expire_type = 1 AND expire_time IS NOT NULL AND current_timestamp() > expire_time THEN FALSE
                             ELSE TRUE
                         END
                     );`;

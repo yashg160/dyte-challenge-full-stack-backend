@@ -9,4 +9,6 @@ router.use('/dashboard', handleTokenAuth, require('./dashboard/index'));
 
 router.use('/links', handleTokenAuth, require('./links/index'));
 
+router.use('/redirect', require('./redirect/index'));
+
 module.exports = router;

@@ -26,7 +26,6 @@ router.get('/', async (req, res, next) => {
       message: 'Retrieved data',
     });
   } catch (err) {
-    console.log('Link Data Fetching Error', err);
     return res.status(500).json({
       message: 'A server error occurred. Try again later',
     });
